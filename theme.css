@@ -1,0 +1,94 @@
+/* Readable Typography 1.0.0. MIT. */
+
+body.theme-light {
+  --background-primary: #fbf7ed;
+  --background-primary-alt: #fbf7ed;
+  --background-secondary: #f0eade;
+  --background-secondary-alt: #f0eade;
+  --background-modifier-form-field: #fbf7ed;
+  --background-modifier-border: #958477;
+  --background-modifier-border-hover: #958477;
+  --background-modifier-border-focus: #294c7a;
+  --background-modifier-hover: color-mix(in srgb, #294c7a 12%, #f0eade);
+  --background-modifier-active-hover: color-mix(in srgb, #294c7a 18%, #f0eade);
+  --text-normal: #2b251e;
+  --text-muted: #544a40;
+  --text-faint: #544a40;
+  --text-accent: #294c7a;
+  --text-accent-hover: #69467b;
+  --text-on-accent: #fbf7ed;
+  --interactive-accent: #294c7a;
+  --interactive-accent-hover: #69467b;
+  --text-selection: color-mix(in srgb, #294c7a 25%, #fbf7ed);
+  --text-highlight-bg: color-mix(in srgb, #854b28 23%, #fbf7ed);
+  --color-blue: #294c7a;
+  --color-orange: #854b28;
+  --color-green: #385d49;
+  --color-purple: #69467b;
+  --code-background: #f0eade;
+  --code-normal: #2b251e;
+  --code-comment: #544a40;
+  --code-function: #294c7a;
+  --code-keyword: #69467b;
+  --code-string: #385d49;
+  --link-color: #294c7a;
+  --link-external-color: #385d49;
+  --icon-color: #544a40;
+  --nav-item-color: #544a40;
+  --nav-item-color-active: #2b251e;
+  --tab-text-color: #544a40;
+}
+body.theme-dark {
+  --background-primary: #272421;
+  --background-primary-alt: #272421;
+  --background-secondary: #302a27;
+  --background-secondary-alt: #302a27;
+  --background-modifier-form-field: #272421;
+  --background-modifier-border: #8d7d70;
+  --background-modifier-border-hover: #8d7d70;
+  --background-modifier-border-focus: #adcaf0;
+  --background-modifier-hover: color-mix(in srgb, #adcaf0 12%, #302a27);
+  --background-modifier-active-hover: color-mix(in srgb, #adcaf0 18%, #302a27);
+  --text-normal: #f7ede0;
+  --text-muted: #cdc1b3;
+  --text-faint: #cdc1b3;
+  --text-accent: #adcaf0;
+  --text-accent-hover: #dbbce6;
+  --text-on-accent: #272421;
+  --interactive-accent: #adcaf0;
+  --interactive-accent-hover: #dbbce6;
+  --text-selection: color-mix(in srgb, #adcaf0 25%, #272421);
+  --text-highlight-bg: color-mix(in srgb, #f2ba92 23%, #272421);
+  --color-blue: #adcaf0;
+  --color-orange: #f2ba92;
+  --color-green: #b2dab8;
+  --color-purple: #dbbce6;
+  --code-background: #302a27;
+  --code-normal: #f7ede0;
+  --code-comment: #cdc1b3;
+  --code-function: #adcaf0;
+  --code-keyword: #dbbce6;
+  --code-string: #b2dab8;
+  --link-color: #adcaf0;
+  --link-external-color: #b2dab8;
+  --icon-color: #cdc1b3;
+  --nav-item-color: #cdc1b3;
+  --nav-item-color-active: #f7ede0;
+  --tab-text-color: #cdc1b3;
+}
+
+body { --line-height-normal: 1.7; --file-line-width: 65ch; --p-spacing: 1.2rem; --list-spacing: 0.32em; --list-bullet-size: 0.36em; }
+.markdown-rendered a { text-decoration: underline; text-underline-offset: 0.16em; }
+.markdown-rendered :is(h1,h2,h3,h4,h5,h6) { line-height: 1.25; }
+
+.workspace-leaf-content :focus-visible,
+.modal :focus-visible,
+.menu :focus-visible {
+  outline: 2px solid var(--text-accent);
+  outline-offset: -2px;
+}
+
+.markdown-rendered .list-bullet::after,
+.markdown-source-view .list-bullet::after {
+  background-color: var(--text-muted);
+}
