@@ -1,4 +1,4 @@
-/* Readable Typography 1.0.0. MIT. */
+/* Readable Typography 1.0.1. MIT. */
 
 body.theme-light {
   --background-primary: #fbf7ed;
@@ -80,6 +80,10 @@ body.theme-dark {
 body { --line-height-normal: 1.7; --file-line-width: 65ch; --p-spacing: 1.2rem; --list-spacing: 0.32em; --list-bullet-size: 0.36em; }
 .markdown-rendered a { text-decoration: underline; text-underline-offset: 0.16em; }
 .markdown-rendered :is(h1,h2,h3,h4,h5,h6) { line-height: 1.25; }
+
+.is-mobile .markdown-source-view.mod-cm6 .cm-contentContainer > .cm-content {
+  padding-inline: 8px;
+}
 
 .workspace-leaf-content :focus-visible,
 .modal :focus-visible,

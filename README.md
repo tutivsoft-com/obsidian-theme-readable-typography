@@ -2,7 +2,7 @@
 
 A typography-focused Obsidian theme for comfortable reading and writing.
 
-Version 1.0.0. Modes supported: Dark and light. Tested in Obsidian 1.15.1 on Windows.
+Source version 1.0.1. Modes supported: Dark and light. Tested in Obsidian 1.15.1 on Windows.
 
 Adjust the text font and size in Obsidian Appearance. Lexend and Atkinson Hyperlegible are optional local fonts.
 
