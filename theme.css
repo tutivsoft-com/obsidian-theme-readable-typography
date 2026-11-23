@@ -1,4 +1,4 @@
-/* Readable Typography 3.6.0. MIT. */
+/* Readable Typography 3.6.1. MIT. */
 
 body.theme-light {
   --background-primary: #fbf7ed;
@@ -77,9 +77,26 @@ body.theme-dark {
   --tab-text-color: #cdc1b3;
 }
 
-body { --line-height-normal: 1.7; --file-line-width: 65ch; --p-spacing: 1.2rem; --list-spacing: 0.32em; --list-bullet-size: 0.36em; }
+body {
+  --line-height-normal: 1.7;
+  --file-line-width: 65ch;
+  --p-spacing: 1.2rem;
+  --list-spacing: 0.32em;
+  --list-bullet-size: 0.36em;
+  --list-marker-color: var(--text-muted);
+}
+
 .markdown-rendered a { text-decoration: underline; text-underline-offset: 0.16em; }
-.markdown-rendered :is(h1,h2,h3,h4,h5,h6) { line-height: 1.25; }
+
+.markdown-rendered,
+.markdown-source-view {
+  --h1-line-height: 1.25;
+  --h2-line-height: 1.25;
+  --h3-line-height: 1.25;
+  --h4-line-height: 1.25;
+  --h5-line-height: 1.25;
+  --h6-line-height: 1.25;
+}
 
 .is-mobile .markdown-source-view.mod-cm6 .cm-contentContainer > .cm-content {
   padding-inline: 8px;
@@ -90,9 +107,4 @@ body { --line-height-normal: 1.7; --file-line-width: 65ch; --p-spacing: 1.2rem; 
 .menu :focus-visible {
   outline: 2px solid var(--text-accent);
   outline-offset: -2px;
-}
-
-.markdown-rendered .list-bullet::after,
-.markdown-source-view .list-bullet::after {
-  background-color: var(--text-muted);
 }

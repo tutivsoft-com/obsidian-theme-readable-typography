@@ -1,10 +1,8 @@
-# Readable Typography
+# Readable Typography design plan
 
 A typography-focused Obsidian theme for comfortable reading and writing.
 
-**Status: planning only. No theme code has been written.**
-
-Plan date: 13 November 2026. This repository currently contains this planning README only. The name is a descriptive working name; Community name availability must be checked before any future submission.
+This plan records the original design and scope from 13 November 2026. See the [README](README.md) for the implemented theme, compatibility, and installation instructions.
 
 Search keywords: Obsidian theme, typography, readable text, line spacing, long-form reading.
 
@@ -19,7 +17,7 @@ Users looking for readable setups discuss font choices, line spacing, faint bull
 - [Fonts and long-session reading preferences](https://www.reddit.com/r/ObsidianMD/comments/1vfdfk7/themes_that_dont_hurt_the_eyes_to_read_through/)
 - [Complaints about dim and tightly spaced bullets](https://www.reddit.com/r/ObsidianMD/comments/1vq2hww/what_theme_do_you_use/)
 
-The Reddit links come from the preceding idea research and represent qualitative demand, not a market-size estimate or proof that existing themes do not solve the problem. For Pure OLED Rainbow, the additional requirement comes directly from the owner. Other themes and snippets may already address parts of these needs.
+The Reddit links provide examples from the original research. Other themes and snippets may already address parts of these needs.
 
 ## Planned appearance and features
 
@@ -34,7 +32,7 @@ The Reddit links come from the preceding idea research and represent qualitative
 
 Plan both light and dark modes.
 
-## Future implementation and release plan
+## Original implementation and release plan
 
 1. Confirm the final palette and layout against the requirements above.
 2. Build the theme only after Rahul authorises implementation. Prefer supported Obsidian CSS variables and keep source readable.
@@ -51,9 +49,7 @@ Official references for later implementation:
 - [Submit a theme](https://docs.obsidian.md/Themes/App%20themes/Submit%20your%20theme)
 - [Developer policies](https://docs.obsidian.md/community-directory/developer-policies)
 
-These are future work items. No release, installation instructions, compatibility certification or Community listing is being claimed by this planning repository.
-
-## Acceptance checklist for later implementation
+## Original acceptance checklist
 
 - [ ] Review long prose, lists, links and mixed scripts at different font sizes.
 - [ ] Check font fallbacks and offline behaviour.
@@ -62,6 +58,6 @@ These are future work items. No release, installation instructions, compatibilit
 - [ ] Review screenshots for private information and verify all published documentation and asset paths.
 - [ ] Verify the default branch, release revision and uploaded assets before calling any future release complete.
 
-## Current boundary
+## Original planning scope
 
-Only repository creation and this Markdown plan are authorised in this task. Do not add theme CSS, manifests, screenshots, release tags or submissions as part of this planning work. Future work stays on this repository's verified primary branch.
+The original planning task covered repository creation and the design plan. Theme implementation followed in a later revision.
