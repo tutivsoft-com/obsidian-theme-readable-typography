@@ -53,6 +53,10 @@ class ThemeTest(unittest.TestCase):
             if selector.startswith(".markdown-rendered") and "line-height" in declarations:
                 self.fail("Use Obsidian's heading variables so user snippets can override them.")
 
+    def test_editor_focus_outline_has_padding_on_desktop_and_mobile(self):
+        editor = self.rules[".markdown-source-view.mod-cm6 .cm-contentContainer > .cm-content"]
+        self.assertEqual(editor["padding-inline"], "8px")
+
     def test_list_markers_follow_obsidian_colors_and_states(self):
         self.assertEqual(self.rules["body"].get("--list-marker-color"), "var(--text-muted)")
         for selector, declarations in self.rules.items():
@@ -66,6 +70,17 @@ class ThemeTest(unittest.TestCase):
             for role in ("--text-normal", "--text-muted", "--link-color", "--link-external-color"):
                 with self.subTest(mode=mode, role=role):
                     self.assertGreaterEqual(contrast(colors[role], background), 4.5)
+
+    def test_custom_accent_uses_obsidian_color_for_links_and_controls(self):
+        accent_selector = '[style*="--accent-h:"]'
+        for mode in ("light", "dark"):
+            with self.subTest(mode=mode):
+                adjusted = self.rules[f"body.theme-{mode}{accent_selector}"]["--text-accent"]
+                self.assertIn("from var(--color-accent)", adjusted)
+        custom = self.rules[f"body{accent_selector}"]
+        self.assertEqual(custom["--link-color"], "var(--text-accent)")
+        self.assertEqual(custom["--interactive-accent"], "var(--text-accent)")
+        self.assertEqual(custom["--text-on-accent-inverted"], "var(--background-primary)")
 
     def test_source_version_matches_manifest(self):
         version = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))["version"]

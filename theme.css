@@ -1,4 +1,4 @@
-/* Readable Typography 3.6.1. MIT. */
+/* Readable Typography 3.6.2. MIT. */
 
 body.theme-light {
   --background-primary: #fbf7ed;
@@ -77,6 +77,25 @@ body.theme-dark {
   --tab-text-color: #cdc1b3;
 }
 
+/* Obsidian sets the inline accent values only when the user picks a color. */
+body.theme-light[style*="--accent-h:"] {
+  --text-accent: oklch(from var(--color-accent) min(l, 0.48) c h);
+}
+
+body.theme-dark[style*="--accent-h:"] {
+  --text-accent: oklch(from var(--color-accent) max(l, 0.72) c h);
+}
+
+body[style*="--accent-h:"] {
+  --text-accent-hover: color-mix(in oklab, var(--text-accent), var(--text-normal) 25%);
+  --text-on-accent-inverted: var(--background-primary);
+  --interactive-accent: var(--text-accent);
+  --interactive-accent-hover: var(--text-accent-hover);
+  --background-modifier-border-focus: var(--text-accent);
+  --text-selection: color-mix(in srgb, var(--text-accent) 25%, var(--background-primary));
+  --link-color: var(--text-accent);
+}
+
 body {
   --line-height-normal: 1.7;
   --file-line-width: 65ch;
@@ -98,7 +117,7 @@ body {
   --h6-line-height: 1.25;
 }
 
-.is-mobile .markdown-source-view.mod-cm6 .cm-contentContainer > .cm-content {
+.markdown-source-view.mod-cm6 .cm-contentContainer > .cm-content {
   padding-inline: 8px;
 }
 
